@@ -1,8 +1,10 @@
-from flask import json, jsonify, Flask
+from flask import json, jsonify, Flask, render_template
 import requests
 
 app = Flask(__name__)
-
+@app.route('/api/home')
+def home():
+    return render_template("home.html")
 @app.route('/api/<state>')
 def api(state):
     headers = {
