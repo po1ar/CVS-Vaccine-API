@@ -2,6 +2,9 @@ from flask import json, jsonify, Flask, render_template
 import requests
 
 app = Flask(__name__)
+@app.route('/')
+def index():
+ return "Hello world!"
 @app.route('/api/<state>')
 def api(state):
     headers = {
