@@ -2,7 +2,7 @@ from flask import json, jsonify, Flask, render_template
 import requests
 
 app = Flask(__name__)
-@app.route('/')
+@app.route('/api')
 def index():
  return "Hello world!"
 @app.route('/api/<state>')
